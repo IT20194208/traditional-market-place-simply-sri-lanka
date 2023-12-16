@@ -9,37 +9,52 @@
       rel="stylesheet"
     />
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/product.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <div id="search-container">
-        <input
-          type="search"
-          id="search-input"
-          placeholder="Search product name here.."
-        />
-        <button id="search">Search</button>
-      </div>
-      <div id="buttons">
-        <button class="btn" onclick="filterProduct('all')">All</button>
-        <button class="btn" onclick="filterProduct('Topwear')">
-          Topwear
-        </button>
-        <button class="btn" onclick="filterProduct('Bottomwear')">
-          Bottomwear
-        </button>
-        <button class="btn" onclick="filterProduct('Jacket')">
-          Jacket
-        </button>
-        <button class="btn" onclick="filterProduct('Watch')">
-          Watch
-        </button>
-      </div>
-      <div id="products"></div>
-    </div>
+
+    <!--header secttion start-->
+    <header>
+        <a href="#" class="logo"><i class="fa fa-shopping-bag"></i>celobiz.com</a>
+        <div id="menu-bar" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <a href="home.html">home</a>
+            <a href="#gallery">gallery</a>
+            <a href="#about">about us</a>
+            <a href="#contact">contact us</a>
+        </nav>
+    </header>
+    <!--end of the header section-->
+    <br/><br/> <br/><br/> <br/><br/>
+    <!--this is production section for searching-->
+    <section class="popular" id="popular">
+        <!--this is searching item section-->
+        <div class="wrapper">
+            <div id="search-container">
+                    <input
+                    type="text"
+                    id="myinput"
+                    placeholder="Search product...."
+                    />
+                    <button id="search">Search</button>
+            </div>
+            <br>
+            <h3 class="text-danger mt-5 text-center" id="para" style="display: none;">Not Found</h3>
+        </div>
+        <br/>
+    <!--end of searching section-->
+        <div class="box-container" id="card">
+               
+        </div>
+    </section>    
+   <!--this is end of production searching section-->
+        
+
+      
+      
     <!-- Script -->
-    <script src="js/script2.js"></script>
+    <script src="js/script3.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

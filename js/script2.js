@@ -143,4 +143,7 @@ let products = {
   window.onload = () => {
     filterProduct("all");
   };
+
+
+  
   
