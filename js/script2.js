@@ -78,9 +78,9 @@ let products = {
     price.innerText = "$" + i.price;
     container.appendChild(price);
 
-    let link = document.createElement("button");
-    link.innerText = "$" + i.link;
-    container.appendChild(link);
+    // let link = document.createElement("button");
+    // link.innerText = "$" + i.link;
+    // container.appendChild(link);
   
     card.appendChild(container);
     document.getElementById("products").appendChild(card);
