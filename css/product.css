@@ -252,6 +252,9 @@ img {
 .container h5 {
   font-weight: 500;
 }
+.container h6 {
+    font-size: 20px;
+  }
 .hide {
   display: none;
 }
@@ -262,7 +265,8 @@ img {
     height: 10em;
   }
   .card {
-    max-width: 23em;
+    max-width: 25em;
+    max-height: 25em;
     margin-top: 2em;
     font-size: 7px;
   }
@@ -271,3 +275,4 @@ img {
     grid-column-gap: 1em;
   }
 }
+

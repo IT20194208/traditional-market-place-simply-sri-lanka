@@ -1,7 +1,7 @@
 let products = {
     data: [
       {
-        productName: "Regular White T-Shirt",
+        productName: "Regular White T-ShirtRegular White T-ShirtRegular White T-ShirtRegular White T-ShirtRegular White T-ShirtRegular White T-Shirt",
         category: "Topwear",
         price: "30",
         image: "js/white-tshirt.jpg",
@@ -31,7 +31,7 @@ let products = {
         image: "js/4.png",
       },
       {
-        productName: "Stylish Pink Trousers",
+        productName: "Stylish Pink TrousersStylish Pink TrousersStylish Pink TrousersStylish Pink TrousersStylish Pink TrousersStylish Pink TrousersStylish Pink Trousers",
         category: "Bottomwear",
         price: "89",
         image: "js/1.jpg",
