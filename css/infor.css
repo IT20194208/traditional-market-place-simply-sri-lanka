@@ -72,7 +72,7 @@ img{
     font-size: 0.9rem;
     display: inline-block;
     margin-bottom: 0.5rem;
-    background: #256eff;
+    background:#f64749;
     color: #fff;
     padding: 0 0.3rem;
     transition: all 0.5s ease;
@@ -108,13 +108,13 @@ img{
     padding-bottom: 0.6rem;
 }
 .product-detail p{
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     padding: 0.3rem;
     opacity: 0.8;
 }
 .product-detail ul{
     margin: 1rem 0;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 .product-detail ul li{
     margin: 0;
@@ -202,4 +202,9 @@ img{
     .product-content{
         padding-top: 0;
     }
+}
+.whatsapp{
+    font-size: 20px;
+    color: #f64749;
+    font-weight: 900;
 }

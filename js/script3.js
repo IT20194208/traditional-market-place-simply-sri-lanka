@@ -8,6 +8,7 @@
         category: "craft",
         price: "Rs.500.00",
         image: "images/all/1.jpg",
+        link:"1.html",
       },
       {
         id:2,
