@@ -7,6 +7,7 @@
         productName: "Sri Lanka hand made products",
         category: "craft",
         price: "Rs.500.00",
+        des:"",
         image: "images/all/1.jpg",
         link:"1.html",
       },
@@ -499,10 +500,10 @@ showgallery(galleryarray);
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                 </div>
-                <a href="${currarray[i].link}" class="btn">view product</a>
+                <a href="productInfor.html?id=${currarray[i].id}" class="btn">view product</a>
             </div>
         
-        `
+        `/*this is essential ``*/
     }
   }
 /*this is live searching option*/
@@ -528,3 +529,5 @@ document.getElementById("myinput").addEventListener("keyup",function(){
         }
     }
 })
+
+

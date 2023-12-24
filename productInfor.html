@@ -25,108 +25,14 @@
             <a href="#about">about us</a>
             <a href="#contact">contact us</a>
         </nav>
-    </header>
+    </header> 
     <!--end of the header section-->
-    <br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/>
     <!--this is production section for searching-->
     <section class="popular" id="popular">
-        <div class = "card-wrapper">
-            <div class = "card">
-              <!-- card left -->
-              <div class = "product-imgs">
-                <div class = "img-display">
-                  <div class = "img-showcase">
-                    <img src = "images/all/1.jpg" alt = "shoe image">
-                    <!-- <img src = "images/all/10.jpg" alt = "shoe image">
-                    <img src = "images/all/11.jpg" alt = "shoe image">
-                    <img src = "images/all/15.jpg" alt = "shoe image"> -->
-                  </div>
-                </div>
-                <!-- <div class = "img-select">
-                  <div class = "img-item">
-                    <a href = "#" data-id = "1">
-                      <img src = "images/all/15.jpg" alt = "shoe image">
-                    </a>
-                  </div>
-                  <div class = "img-item">
-                    <a href = "#" data-id = "2">
-                      <img src = "images/all/15.jpg" alt = "shoe image">
-                    </a>
-                  </div>
-                  <div class = "img-item">
-                    <a href = "#" data-id = "3">
-                      <img src = "images/all/15.jpg" alt = "shoe image">
-                    </a>
-                  </div>
-                  <div class = "img-item">
-                    <a href = "#" data-id = "4">
-                      <img src = "images/all/15.jpg" alt = "shoe image">
-                    </a>
-                  </div>
-                </div> -->
-              </div>
-              <!-- card right -->
-              <div class = "product-content">
-                <h2 class = "product-title">nike shoes</h2>
-                <a href = "#" class = "product-link">visit celobiz store</a>
-                <div class = "product-rating">
-                  <i class = "fas fa-star"></i>
-                  <i class = "fas fa-star"></i>
-                  <i class = "fas fa-star"></i>
-                  <i class = "fas fa-star"></i>
-                  <i class = "fas fa-star-half-alt"></i>
-                  <span>4.7(21)</span>
-                </div>
-      
-                <div class = "product-price">
-                  <p class = "last-price">Old Price: <span>$257.00</span></p>
-                  <p class = "new-price">New Price: <span>$249.00 (5%)</span></p>
-                </div>
-      
-                <div class = "product-detail">
-                  <h2>about this item: </h2>
-                  <p>Ornamental wood items featuring elephants are popular decorative pieces that are often intricately carved and finished with traditional techniques. These items, which can range from small figurines to larger home decor pieces, are made from a variety of different types of wood, including teak, mahogany, and rosewood. Elephant-themed ornamental wood items are particularly popular in countries like India and Sri Lanka,</p>
-                  <p> where the elephant is an important cultural symbol and is revered for its strength, intelligence, and gentle nature. These items are often used as decorative accents in homes and offices and are also popular as souvenirs and gifts. In addition to being beautiful and functional, ornamental wood items featuring elephants are also a valued part of cultural heritage in many parts of the world.</p>
-                  <ul>
-                    <li>Color: <span>Black</span></li>
-                    <li>Available: <span>in stock</span></li>
-                    <li>Category: <span>Shoes</span></li>
-                    <li>Shipping Area: <span>All over the world</span></li>
-                    <li>Shipping Fee: <span>Free</span></li>
-                    <li class="whatsapp">Chat on WhatsApp For Get Your Product</li>
-                    <li class="whatsapp">Our WhatsApp 076 747 2298</li>
-                  </ul>
-                </div>
-                
-                <!-- <div class = "purchase-info">
-                  <input type = "number" min = "0" value = "1">
-                  <button type = "button" class = "btn">
-                    Add to Cart <i class = "fas fa-shopping-cart"></i>
-                  </button>
-                  <button type = "button" class = "btn">Compare</button>
-                </div> -->
-      
-                <div class = "social-links">
-                  <p>Our infor: </p>
-                  <a href = "https://www.facebook.com/celobiz">
-                    <i class = "fab fa-facebook-f"></i>
-                  </a>
-                  <!-- <a href = "#">
-                    <i class = "fab fa-twitter"></i>
-                  </a> -->
-                  <a href = "https://www.youtube.com/@celobiz">
-                    <i class = "fab fa-youtube"></i>
-                  </a>
-                  <a href = "https://api.whatsapp.com/send?phone=94767472298&text=Hellow%20%F0%9F%98%80%0AHowto%20join%20www.celobiz.com%0A">
-                    <i class = "fab fa-whatsapp"></i>
-                  </a>
-                  <!-- <a href = "#">
-                    <i class = "fab fa-pinterest"></i>
-                  </a> -->
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class = "card-wrapper" id="product-details">
+          <!--product details here-->   
+        </div>
       
     </section>    
    <!--this is end of production searching section-->
@@ -135,7 +41,121 @@
       
       
     <!-- Script -->
-    <script src="js/infor/script.js"></script>
-    <script src="js/script.js"></script>
+    <!-- <script src="js/infor/script.js"></script> -->
+    <script src="js/script.js"></script> 
+    <script src="js/script3.js"></script>
+    <script>
+              showproduct(galleryarray);
+
+              function showproduct(currarray){
+
+                document.getElementById("product-details").innerText = "";
+                const urlParams = new URLSearchParams(window.location.search);
+                const productId = urlParams.get('id');
+
+                for(var i=0;i<currarray.length;i++){
+                    if(currarray[i].id==productId){
+                    document.getElementById("product-details").innerHTML += `
+
+                    <div class = "card">
+                        <!-- card left -->
+                        <div class = "product-imgs">
+                          <div class = "img-display">
+                            <div class = "img-showcase">
+                              <img src = "${currarray[i].image}" alt = "shoe image">
+                              <!-- <img src = "images/all/10.jpg" alt = "shoe image">
+                              <img src = "images/all/11.jpg" alt = "shoe image">
+                              <img src = "images/all/15.jpg" alt = "shoe image"> -->
+                            </div>
+                          </div>
+                          <!-- <div class = "img-select">
+                            <div class = "img-item">
+                              <a href = "#" data-id = "1">
+                                <img src = "images/all/15.jpg" alt = "shoe image">
+                              </a>
+                            </div>
+                            <div class = "img-item">
+                              <a href = "#" data-id = "2">
+                                <img src = "images/all/15.jpg" alt = "shoe image">
+                              </a>
+                            </div>
+                            <div class = "img-item">
+                              <a href = "#" data-id = "3">
+                                <img src = "images/all/15.jpg" alt = "shoe image">
+                              </a>
+                            </div>
+                            <div class = "img-item">
+                              <a href = "#" data-id = "4">
+                                <img src = "images/all/15.jpg" alt = "shoe image">
+                              </a>
+                            </div>
+                          </div> -->
+                        </div>
+                        <!-- card right -->
+                        <div class = "product-content">
+                          <h2 class = "product-title">${currarray[i].productName}</h2>
+                          <a href = "#" class = "product-link">visit celobiz store</a>
+                          <div class = "product-rating">
+                            <i class = "fas fa-star"></i>
+                            <i class = "fas fa-star"></i>
+                            <i class = "fas fa-star"></i>
+                            <i class = "fas fa-star"></i>
+                            <i class = "fas fa-star-half-alt"></i>
+                            <span>4.7(21)</span>
+                          </div>
+                
+                          <div class = "product-price">
+                            <!--<p class = "last-price">Old Price: <span>$257.00</span></p>-->
+                            <p class = "new-price">New Price: <span>${currarray[i].price}</span></p>
+                          </div>
+                
+                          <div class = "product-detail">
+                            <h2>about this item: </h2>
+                            <p>Ornamental wood items featuring elephants are popular decorative pieces that are often intricately carved and finished with traditional techniques. These items, which can range from small figurines to larger home decor pieces, are made from a variety of different types of wood, including teak, mahogany, and rosewood. Elephant-themed ornamental wood items are particularly popular in countries like India and Sri Lanka,</p>
+                            <p> where the elephant is an important cultural symbol and is revered for its strength, intelligence, and gentle nature. These items are often used as decorative accents in homes and offices and are also popular as souvenirs and gifts. In addition to being beautiful and functional, ornamental wood items featuring elephants are also a valued part of cultural heritage in many parts of the world.</p>
+                            <ul>
+                              <li>Color: <span>---</span></li>
+                              <li>Available: <span>in stock</span></li>
+                              <li>Category: <span>${currarray[i].category}</span></li>
+                              <li>Shipping Area: <span>All over the world</span></li>
+                              <li>Shipping Fee: <span>inbox</span></li>
+                              <li class="whatsapp">Chat on WhatsApp For Get Your Product</li>
+                              <li class="whatsapp">Our WhatsApp 076 747 2298</li>
+                            </ul>
+                          </div>
+                          
+                          <!-- <div class = "purchase-info">
+                            <input type = "number" min = "0" value = "1">
+                            <button type = "button" class = "btn">
+                              Add to Cart <i class = "fas fa-shopping-cart"></i>
+                            </button>
+                            <button type = "button" class = "btn">Compare</button>
+                          </div> -->
+                
+                          <div class = "social-links">
+                            <p>Our infor: </p>
+                            <a href = "https://www.facebook.com/celobiz">
+                              <i class = "fab fa-facebook-f"></i>
+                            </a>
+                            <!-- <a href = "#">
+                              <i class = "fab fa-twitter"></i>
+                            </a> -->
+                            <a href = "https://www.youtube.com/@celobiz">
+                              <i class = "fab fa-youtube"></i>
+                            </a>
+                            <a href = "https://api.whatsapp.com/send?phone=94767472298&text=Hellow%20%F0%9F%98%80%0AHowto%20join%20www.celobiz.com%0A">
+                              <i class = "fab fa-whatsapp"></i>
+                            </a>
+                            <!-- <a href = "#">
+                              <i class = "fab fa-pinterest"></i>
+                            </a> -->
+                          </div>
+                        </div>
+                      </div>
+                    
+                    `/*this is essential ``*/
+                }}
+              }
+    </script>
   </body>
 </html>
