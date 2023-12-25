@@ -264,3 +264,15 @@ header .navbar a:hover{
     font-size: 1.7rem;
     padding-top: 1rem .1rem;
 }
+#myinput{
+    padding: 10px 10px 10px 10px;
+    
+}
+#myinput:hover{
+    cursor: pointer;
+    border: 0.5px solid #ff3838;
+}
+.myinput{
+    padding: 10px 10px 10px 10px;
+}
+
